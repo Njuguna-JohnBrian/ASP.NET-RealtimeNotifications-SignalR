@@ -36,3 +36,18 @@ msbuild.wrn
 # Visual Studio 2015
 .vs/
 
+appsettings.Development.json
+
+node_modules/
+
+*.angular
+[Dd]ist/
+TestResults
+
+
+#Configurations
+.env
+
+#Snapshooter
+__mismatch__/
+/RealtimeNotificationsSignalR/obj/
