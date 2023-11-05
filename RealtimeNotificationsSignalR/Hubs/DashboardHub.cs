@@ -1,6 +1,8 @@
+using Microsoft.AspNetCore.SignalR;
+
 namespace RealtimeNotificationsSignalR.Hubs;
 
-public class DashboardHub
+public class DashboardHub:Hub
 {
     
 }
