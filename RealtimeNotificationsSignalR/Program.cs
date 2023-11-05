@@ -1,7 +1,24 @@
+using Microsoft.EntityFrameworkCore;
+using RealtimeNotificationsSignalR.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Add services to the container.
+builder.Services.AddSignalR();
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")
+    ), 
+    ServiceLifetime.Singleton
+    );
+
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
 builder.Services.AddControllersWithViews();
+
+
+// builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
@@ -10,6 +27,7 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
+
 app.UseStaticFiles();
 
 app.UseRouting();
