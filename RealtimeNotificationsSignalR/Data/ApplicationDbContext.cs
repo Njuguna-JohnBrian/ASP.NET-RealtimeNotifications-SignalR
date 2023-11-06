@@ -9,6 +9,6 @@ namespace RealtimeNotificationsSignalR.Data
         {
         }
 
-        public virtual DbSet<Product> Products { get; set; } = null!;
+        public virtual DbSet<Product> Product { get; set; } = null!;
     }
 }
