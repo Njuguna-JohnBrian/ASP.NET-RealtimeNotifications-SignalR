@@ -11,8 +11,8 @@ using RealtimeNotificationsSignalR.Data;
 namespace RealtimeNotificationsSignalR.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231105231236_init")]
-    partial class init
+    [Migration("20231106005824_update")]
+    partial class update
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -44,7 +44,7 @@ namespace RealtimeNotificationsSignalR.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products");
+                    b.ToTable("Product");
                 });
 #pragma warning restore 612, 618
         }
