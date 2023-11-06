@@ -16,7 +16,7 @@ public class ProductRepository
 
     public List<Product> GetProducts()
     {
-        var prodList = _dbContext.Products.ToList();
+        var prodList = _dbContext.Product.ToList();
         foreach (var product in prodList)
         {
             _dbContext.Entry(product).Reload();
